@@ -2,7 +2,7 @@ const data = require('../data').data;
 const { test1, test2 } = require('./mocks');
 const { filterAnimals, countChildren } = require('../app');
 
-describe('#filterAnimals(data, string)', () => {
+describe('filter arg', () => {
   test('should throw an error if data is not an array', () => {
     expect(() => {
       filterAnimals(null);
@@ -30,7 +30,7 @@ describe('#filterAnimals(data, string)', () => {
   });
 });
 
-describe('#countChildren(data)', () => {
+describe('count arg', () => {
   test('should throw an error if data is not an array', () => {
     expect(() => {
       countChildren(null);
