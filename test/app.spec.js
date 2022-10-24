@@ -1,5 +1,5 @@
 const data = require('../data').data;
-const { test1, test2 } = require('./mocks');
+const { test1, test2, test3 } = require('./mocks');
 const { filterAnimals, countChildren } = require('../app');
 
 describe('filter arg', () => {
@@ -51,4 +51,9 @@ describe('count arg', () => {
       `${data[0].people[0].name} [${data[0].people[0].animals.length}]`
     );
   });
+
+  test('should deep equal the expected result', () => {
+    const withCount = countChildren(data);
+    expect(withCount).toEqual(test3)
+  })
 });

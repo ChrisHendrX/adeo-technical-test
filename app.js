@@ -41,7 +41,7 @@ const result = Object.keys(argv).reduce((acc, arg) => {
   return acc;
 }, [...data]);
 
-console.log(JSON.stringify(result));
+if (Object.keys(argv).length > 0) console.log(JSON.stringify(result));
 
 module.exports = {
   filterAnimals,
