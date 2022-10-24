@@ -1,0 +1,22 @@
+{
+  "name": "adeo-technical-test",
+  "version": "1.0.0",
+  "description": "A node program which filters a list of elements containing a pattern",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisHendrX/adeo-teschnical-test.git"
+  },
+  "author": "Christophe DRAG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisHendrX/adeo-teschnical-test/issues"
+  },
+  "homepage": "https://github.com/ChrisHendrX/adeo-teschnical-test#readme",
+  "devDependencies": {
+    "jest": "^29.2.1"
+  }
+}
