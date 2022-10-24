@@ -1,5 +1,14 @@
 # Javascript developer test
 
+# Developper notes
+
+- Added ability to chain commands like the following : 
+``` shell script
+$ node app.js --filter=ry --count
+```
+- All the scenarios are tested with jest (don't forget to `npm install` before running any command)
+- To run the tests, simply run `npm run test`
+
 ## Filter
 
 Your job is to write a command-line interface in Node.js. 
