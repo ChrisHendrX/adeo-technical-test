@@ -1,4 +1,4 @@
-const test1 = [
+const filteredTest = [
   {
     name: 'Dillauti',
     people: [
@@ -7,7 +7,7 @@ const test1 = [
   }
 ];
 
-const test2 = [
+const filteredTest2 = [
   {
     name: 'Uzuzozne',
     people: [
@@ -22,7 +22,7 @@ const test2 = [
   }
 ];
 
-const test3 = [
+const countTest = [
   {
     name: 'Dillauti [5]',
     people: [
@@ -81,8 +81,14 @@ const test3 = [
   }
 ];
 
+const mixedTest = [
+  { name: 'Uzuzozne [1]', people: [{ name: 'Lillie Abbott [1]', animals: [{ name: 'John Dory' }] }]},
+  { name: 'Satanwi [1]', people: [{ name: 'Anthony Bruno [1]', animals: [{ name: 'Oryx' }] }]}
+];
+
 module.exports = {
-  test1,
-  test2,
-  test3
+  filteredTest,
+  filteredTest2,
+  countTest,
+  mixedTest
 };

@@ -1,5 +1,5 @@
 const data = require('../data').data;
-const { test1, test2, test3 } = require('./mocks');
+const { filteredTest, filteredTest2, countTest, mixedTest } = require('./mocks');
 const { filterAnimals, countChildren } = require('../app');
 
 describe('filter arg', () => {
@@ -18,7 +18,7 @@ describe('filter arg', () => {
   });
 
   test('should return one country with one person owning an animal named "Deer Mouse"', () => {
-    expect(filterAnimals(data, 'Deer Mouse')).toEqual(test1);
+    expect(filterAnimals(data, 'Deer Mouse')).toEqual(filteredTest);
   });
 
   test('should return an empty array if the given animal name does not exist', () => {
@@ -26,7 +26,7 @@ describe('filter arg', () => {
   });
 
   test('should return an array of animals whose name contains the string "ry"', () => {
-    expect(filterAnimals(data, 'ry')).toEqual(test2);
+    expect(filterAnimals(data, 'ry')).toEqual(filteredTest2);
   });
 });
 
@@ -54,6 +54,11 @@ describe('count arg', () => {
 
   test('should deep equal the expected result', () => {
     const withCount = countChildren(data);
-    expect(withCount).toEqual(test3)
-  })
+    expect(withCount).toEqual(countTest);
+  });
+});
+
+describe('chain filter and count args', () => {
+  const mixed = countChildren(filterAnimals(data, 'ry'));
+  expect(mixed).toEqual(mixedTest)
 });
