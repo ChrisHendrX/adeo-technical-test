@@ -1,6 +1,6 @@
 const { data } = require('./data');
 
-// Create an object containing all of the args, the arguments without double dashes will be automatically
+// Create an object containing all of the args, the arguments without double dashes will be automatically removed
 
 const argv = process.argv.slice(2) // Slice the arguments to get all the custom arguments
 .reduce((acc, arg) => {
@@ -13,7 +13,7 @@ const argv = process.argv.slice(2) // Slice the arguments to get all the custom 
 const filterAnimals = (countries, find) => {
   // Ensure that the find param is a string
   find = typeof find === 'string' ? find : '';
-
+  if (!find && countries) return countries;
   return countries.reduce((acc, country) => {
     const people = country.people.reduce((acc, person) => {
       const filteredAnimals = person.animals.filter(animal => animal.name.includes(find));
